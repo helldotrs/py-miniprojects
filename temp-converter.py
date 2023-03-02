@@ -26,9 +26,10 @@ def c2f(a):
 
 input_var = float(input("input number, dot [.] for decimal:"))
 
+#c and f
 print(f"{input_var}c --> {c2f(input_var)}f")
-
 print(f"{input_var}f --> {f2c(input_var)}c")
 
+#c and k
 print(f"{input_var}k --> {k2c(input_var)}c")
 print(f"{input_var}c --> {c2k(input_var)}k")
