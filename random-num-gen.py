@@ -5,8 +5,11 @@ import datetime #lets try later with zero imports.
 def rand_date_time():
     now = datetime.datetime.now()
     date_int = int(now.strftime('%d%m%y'))
-    time_int = int(now.strftime('%H%M'))
+    time_int = int(now.strftime('%S%M'))
     var_name = date_int / time_int 
-    return var_name[0]
+    return int(var_name) * int(now.strftime('%S')) #fix
   
 print(rand_date_time())
+print(rand_date_time())
+print(rand_date_time())
+# not there yet
