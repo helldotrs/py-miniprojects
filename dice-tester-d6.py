@@ -14,6 +14,6 @@ for a in test_string:
 
 count = 1
 for a in output:
-  print(f"side{}: {}", count, a)
+  print("side{}: {}", count, a)
   count += 1
   
