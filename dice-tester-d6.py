@@ -12,4 +12,8 @@ test_string = filtered_test_string
 for a in test_string:
   output[int(a)-1] += 1
 
-print(output)
+count = 1
+for a in output:
+  print(f"side{}: {}", count, a)
+  count += 1
+  
