@@ -3,7 +3,7 @@ filtered_test_string=[]
 d            = 6 #number of sides, only currently works for 6
 output       = [0,0,0, 0,0,0]
 
-test_strint = input("input:")
+test_string = input("input:") # overwrites the preset value
 
 for a in test_string:
   if(a.isdigit() and 1 <= int(a) <= d):
