@@ -3,6 +3,8 @@ filtered_test_string=[]
 d            = 6 #number of sides, only currently works for 6
 output       = [0,0,0, 0,0,0]
 
+test_strint = input("input:")
+
 for a in test_string:
   if(a.isdigit() and 1 <= int(a) <= d):
     filtered_test_string.append(a)
