@@ -10,19 +10,34 @@ def convert_to_binary(string):
             binary_result += '1'  
     return binary_result
 
+def add_padding(string, count_zeros, count_ones):
+    # Add 1 if there are more 1s, else add 0
+    if count_zeros > count_ones:
+        padded_string = string.ljust(output_len, '1')
+    else:
+        padded_string = string.ljust(output_len, '0')
+    return padded_string
+
+def compress_string(string, count_zeros, count_ones):
+    # Create a compressed string with alternating 0s and 1s
+    compressed_string = ''.join(['0' if i % 2 == 0 else '1' for i in range(output_len)])
+    
+    # Replace the alternating bits with the counted 0s and 1s
+    compressed_string = compressed_string[:count_zeros] + compressed_string[output_len - count_ones:]
+    return compressed_string
+
 def adjust_len(string):
-    if len(string) < output_len:
-        for i in range(len(string), output_len):
-            # Decide whether to add '0' or '1' based on adjacent characters
-            if i % 2 == 0:
-                string += '0'
-            else:
-                string += '1'
-        adjusted = string[:output_len]  # Truncate the string to the desired length
-    elif len(string) > output_len:
-        adjusted = string[:output_len]  # If the binary string is longer than the desired length, truncate it
+    current_len = len(string)
+    count_zeros = string.count('0')
+    count_ones = current_len - count_zeros
+    
+    if current_len < output_len:
+        adjusted = add_padding(string, count_zeros, count_ones)
+    elif current_len > output_len:
+        adjusted = compress_string(string, count_zeros, count_ones)
     else:
         adjusted = string
+    
     return adjusted
 
 def hasher(a):
