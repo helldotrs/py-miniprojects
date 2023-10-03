@@ -12,7 +12,7 @@ def convert_to_binary(string):
 
 def adjust_len(string):
     if len(string) < output_len:        
-        adjusted = string.ljust(output_len, '0') #zero padding
+        adjusted = string.rjust(output_len, '0') #zero padding
         
     elif len(string) > output_len: # If the binary string is longer than the desired length, truncate it
         adjusted = string[:output_len] 
