@@ -23,12 +23,12 @@ def adjust_len(string):
     return adjusted
 
 def hasher(a):
-    a = covert_to_binary(a)
+    a = convert_to_binary(a)
     a = adjust_len(a)
     return a
 
 def print_hash(a):
-    print("hash for {a}: ")
+    print(f"hash for {a}: ")
     print(hasher(a))
 
 print_hash("a")
