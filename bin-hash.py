@@ -1,4 +1,3 @@
-input_string = "foobar"
 output_len = 32
 
 def convert_to_binary(string):
@@ -28,3 +27,11 @@ def hasher(a):
     a = adjust_len(a)
     return a
 
+def print_hash(a):
+    print("hash for {a}: ")
+    print(hasher(a))
+
+print_hash("a")
+print_hash("foo bar")
+print_hash("password123")
+print_hash("abcefghijklmnopqrstuvwxyz")
