@@ -1,4 +1,4 @@
-input = "foobar"
+input_string = "foobar"
 output_len = 32
 
 def convert_to_binary(string):
@@ -13,13 +13,18 @@ def convert_to_binary(string):
 
 def adjust_len(string):
     if len(string) < output_len:        
-        adjusted = string.ljust(output_len, '0') #zero padding, fix
+        adjusted = string.ljust(output_len, '0') #zero padding
         
     elif len(string) > output_len: # If the binary string is longer than the desired length, truncate it
-        adjusted = adjusted[:len]
+        adjusted = string[:output_len] #fixed the syntax error here
 
-    else
+    else:
         adjusted = string
         
     return adjusted
+
+def hasher(a):
+    a = covert_to_binary(a)
+    a = adjust_len(a)
+    return a
 
