@@ -62,5 +62,4 @@ print_hash("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius
 while True:
     user_input = input("Enter a string: ")
     
-    hashed_result = hasher(user_input)
-    print(f"Hashed result for '{user_input}': {hashed_result}")
+    print_hash(user_input)
