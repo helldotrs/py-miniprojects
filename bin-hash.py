@@ -7,7 +7,7 @@ def convert_to_binary(string):
         if ascii_code % 2 == 0: 
             binary_result += '0' 
         else:
-            binary_result += '1'  # If odd, append '1' to the result string
+            binary_result += '1'  
     return binary_result
 
 def adjust_len(string):
@@ -15,7 +15,7 @@ def adjust_len(string):
         adjusted = string.ljust(output_len, '0') #zero padding
         
     elif len(string) > output_len: # If the binary string is longer than the desired length, truncate it
-        adjusted = string[:output_len] #fixed the syntax error here
+        adjusted = string[:output_len] 
 
     else:
         adjusted = string
