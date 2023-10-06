@@ -5,11 +5,8 @@ import re
 def count_words(a):
     a           = re.sub(r'[^\w\s]', '', a) #regex punctuation removal
     a           = a.lower()
-
     word_list   = a.split()
-
     word_count  = {word: word_list.count(word) for word in word_list}
-
     return word_count
 
 def print_count(a):
