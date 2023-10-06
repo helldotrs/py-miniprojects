@@ -7,3 +7,10 @@ print (input_string)
 
 word_list = [word in input_string.split()]
 print (word_list)
+
+word_count = {}
+for word in word_list:
+    if word in word_count:
+        word_count[word] += 1
+    else:
+        word_count[word] = 1
