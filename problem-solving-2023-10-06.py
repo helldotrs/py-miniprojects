@@ -3,11 +3,13 @@
 import re
 
 def remove_punctuation(a):
-    return re.sub(r"^\w\s", "", a)
+    return re.sub(r'[^\w\s]', '', a)
 
 input_string  = "Hello, world! This is a beautiful world."
 
 input_string = remove_punctuation(input_string)
+
+print (input_string)
 
 input_string = input_string.lower()
 print (input_string)
@@ -24,4 +26,5 @@ for word in word_list:
         word_count[word] += 1
     else:
         word_count[word] = 1
-print (word_count)
+
+print(word_count)
