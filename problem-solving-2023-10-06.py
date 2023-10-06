@@ -2,29 +2,17 @@
 
 import re
 
-def remove_punctuation(a):
-    return re.sub(r'[^\w\s]', '', a)
+def count_words(a):
+    a           = re.sub(r'[^\w\s]', '', a) #regex punctuation removal
+    a           = a.lower()
 
-input_string  = "Hello, world! This is a beautiful world."
+    word_list   = a.split()
 
-input_string = remove_punctuation(input_string)
+    word_count  = {word: word_list.count(word) for word in word_list}
 
-print (input_string)
+    return word_count
 
-input_string = input_string.lower()
-print (input_string)
+def print_count(a):
+    print(count_words(a))
 
-word_list = []
-for word in input_string.split():
-    word_list.append(word)
-
-print (word_list)
-
-word_count = {}
-for word in word_list:
-    if word in word_count:
-        word_count[word] += 1
-    else:
-        word_count[word] = 1
-
-print(word_count)
+print_count("Hello, world! This is a beautiful world.")
