@@ -24,3 +24,4 @@ for word in word_list:
         word_count[word] += 1
     else:
         word_count[word] = 1
+print (word_count)
