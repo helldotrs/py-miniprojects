@@ -5,7 +5,10 @@ input_string  = "Hello, world! This is a beautiful world."
 input_string = input_string.lower()
 print (input_string)
 
-word_list = [word in input_string.split()]
+word_list = []
+for word in input_string.split():
+    word_list.append(word)
+
 print (word_list)
 
 word_count = {}
