@@ -37,10 +37,10 @@ def test():
     eat_test(north_side)
 
 def test_and_print():
-  test()
   print("north side:", north_side)
   print("south side:", south_side)
   print("")
+  test()
 
 #lose test:
 #s2n("corn")
