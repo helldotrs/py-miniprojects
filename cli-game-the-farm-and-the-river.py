@@ -3,6 +3,8 @@ witten by chatGPT with promt:
 User
 in python, I want to write the farmer, boat, fox, goose and corn riddle as a text based game. with the commands to use being "take x, leave x, go north, go south"
 """
+# running this program in this state is a great example of why you cant relay on chatGPT to just write your code and trust it to work. 
+
 class Game:
     def __init__(self):
         self.left_bank = {'farmer', 'fox', 'goose', 'corn'}
