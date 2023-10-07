@@ -13,8 +13,6 @@ def n2s(a):
   
   north_side.remove("farmer")
   south_side.append("farmer")
-  
-  a = ""
 
 def s2n(a):
     if(a):
@@ -23,8 +21,6 @@ def s2n(a):
     
     south_side.remove("farmer")
     north_side.append("farmer")
-  
-    a = ""
 
 def test():
   def eat_test(a):
