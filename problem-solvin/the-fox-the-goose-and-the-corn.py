@@ -35,3 +35,8 @@ def test():
     eat_test(list2)
   elif "farmer" in list2:
     eat_test(list1)
+
+#lose test:
+s2n("corn")
+
+
