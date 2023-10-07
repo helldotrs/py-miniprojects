@@ -7,8 +7,21 @@ north_side = []
 south_side = ["farmer", "fox", "goose", "corner"]
 
 def n2s(a):
-  north_side.remove(a)
+  if(a):
+    north_side.remove(a)
+    south_side.append(a)
+  
   north_side.remove("farmer")
-
-  south_side.append(a)
   south_side.append("farmer")
+  
+  a = ""
+
+def s2n(a):
+    if(a):
+      south_side.remove(a)
+      north_side.append(a)
+    
+    south_side.remove("farmer")
+    north_side.append("farmer")
+  
+    a = ""
