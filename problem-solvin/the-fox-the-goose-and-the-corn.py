@@ -25,7 +25,7 @@ def s2n(a):
 def test():
   def eat_test(a):
     if "goose" in a and ("fox" in a or "corn" in a):
-      exit("loose:(")
+        exit("loose:(")
   
   if "farmer" in north_side:
       eat_test(south_side)
@@ -34,5 +34,5 @@ def test():
 
 #lose test:
 s2n("corn")
-
-
+test()
+print("test")
