@@ -25,3 +25,13 @@ def s2n(a):
     north_side.append("farmer")
   
     a = ""
+
+def test():
+  def eat_test(a):
+    if "goose" in a and ("fox" in a or "corn" in a):
+      exit("loose:(")
+  
+  if "farmer" in list1:
+    eat_test(list2)
+  elif "farmer" in list2:
+    eat_test(list1)
