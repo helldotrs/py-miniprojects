@@ -40,4 +40,9 @@ def test_and_print():
 
 #lose test:
 #s2n("corn")
+#play area start
+s2n("goose")
+n2s()
+
+#play area end
 print("the end") #mostly here for test reasons 
