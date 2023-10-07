@@ -4,7 +4,7 @@
 #how can the farmer cross the river? 
 
 north_side = []
-south_side = ["farmer", "fox", "goose", "corner"]
+south_side = ["farmer", "fox", "goose", "corn"]
 
 def n2s(a):
   if(a):
