@@ -44,6 +44,9 @@ def test_and_print():
 
 #lose test:
 #s2n("corn")
+
+test_and_print() #mostly print in this instance;)
+
 #play area start
 s2n("goose")
 n2s("empty")
