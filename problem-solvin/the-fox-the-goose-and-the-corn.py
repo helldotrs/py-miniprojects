@@ -7,7 +7,7 @@ north_side = []
 south_side = ["farmer", "fox", "goose", "corn"]
 
 def n2s(a):
-  if(a is not "empty"):
+  if(a != "empty"):
     north_side.remove(a)
     south_side.append(a)
   
@@ -15,7 +15,7 @@ def n2s(a):
   south_side.append("farmer")
   test_and_print()
 def s2n(a):
-  if(a is not "emtpy"):
+  if(a != "emtpy"):
     south_side.remove(a)
     north_side.append(a)
     
@@ -39,7 +39,8 @@ def test():
 def test_and_print():
   test()
   print("north side:", north_side)
-  print("southside:", south_side)
+  print("south side:", south_side)
+  print("")
 
 #lose test:
 #s2n("corn")
