@@ -13,26 +13,31 @@ def n2s(a):
   
   north_side.remove("farmer")
   south_side.append("farmer")
-
+  test_and_print()
 def s2n(a):
-    if(a):
-      south_side.remove(a)
-      north_side.append(a)
+  if(a):
+    south_side.remove(a)
+    north_side.append(a)
     
-    south_side.remove("farmer")
-    north_side.append("farmer")
+  south_side.remove("farmer")
+  north_side.append("farmer")
+  test_and_print()
 
 def test():
   def eat_test(a):
     if "goose" in a and ("fox" in a or "corn" in a):
-        exit("loose:(")
+      exit("loose:(")
   
   if "farmer" in north_side:
-      eat_test(south_side)
+    eat_test(south_side)
   elif "farmer" in south_side:
-      eat_test(north_side)
+    eat_test(north_side)
+
+def test_and_print():
+  test()
+  print("north side:", north_side)
+  print("southside:", south_side)
 
 #lose test:
-s2n("corn")
-test()
-print("test")
+#s2n("corn")
+print("the end") #mostly here for test reasons 
