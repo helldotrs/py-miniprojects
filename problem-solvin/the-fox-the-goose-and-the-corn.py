@@ -31,10 +31,10 @@ def test():
     if "goose" in a and ("fox" in a or "corn" in a):
       exit("loose:(")
   
-  if "farmer" in list1:
-    eat_test(list2)
-  elif "farmer" in list2:
-    eat_test(list1)
+  if "farmer" in north_side:
+      eat_test(south_side)
+  elif "farmer" in south_side:
+      eat_test(north_side)
 
 #lose test:
 s2n("corn")
