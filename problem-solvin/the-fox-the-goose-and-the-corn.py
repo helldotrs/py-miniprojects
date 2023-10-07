@@ -7,7 +7,7 @@ north_side = []
 south_side = ["farmer", "fox", "goose", "corn"]
 
 def n2s(a):
-  if(a):
+  if(a is not "empty"):
     north_side.remove(a)
     south_side.append(a)
   
@@ -15,7 +15,7 @@ def n2s(a):
   south_side.append("farmer")
   test_and_print()
 def s2n(a):
-  if(a):
+  if(a is not "emtpy"):
     south_side.remove(a)
     north_side.append(a)
     
@@ -24,6 +24,9 @@ def s2n(a):
   test_and_print()
 
 def test():
+  if all(item in north_side for item in ["farmer", "fox", "goose", "corn"]):
+    exit("u r winrar!")
+  
   def eat_test(a):
     if "goose" in a and ("fox" in a or "corn" in a):
       exit("loose:(")
@@ -42,7 +45,12 @@ def test_and_print():
 #s2n("corn")
 #play area start
 s2n("goose")
-n2s()
+n2s("empty")
+s2n("corn")
+n2s("goose")
+s2n("fox")
+n2s("empty")
+s2n("goose")
 
 #play area end
 print("the end") #mostly here for test reasons 
