@@ -1,4 +1,4 @@
-#does not work.
+#does not work. After modifications, it can solve a really simple one.. lmao.
 
 import heapq
 
