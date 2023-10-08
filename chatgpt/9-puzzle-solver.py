@@ -55,7 +55,7 @@ class PuzzleNode:
 def solve_puzzle(initial_state):
     open_set = []
     heapq.heappush(open_set, PuzzleNode(initial_state))
-    closed_set = set()
+    closed_set = {initial_state: 0}
 
     while open_set:
         current_node = heapq.heappop(open_set)
@@ -68,14 +68,14 @@ def solve_puzzle(initial_state):
             path.reverse()
             return path
 
-        closed_set.add(current_node)
         possible_moves = current_node.get_possible_moves()
 
         for move in possible_moves:
             child_state = current_node.generate_child(move)
             child_node = PuzzleNode(child_state, parent=current_node, move=move[0], depth=current_node.depth + 1)
 
-            if child_node not in closed_set:
+            if child_state not in closed_set or current_node.depth + 1 < closed_set[child_state]:
+                closed_set[child_state] = current_node.depth + 1
                 heapq.heappush(open_set, child_node)
 
     return None
