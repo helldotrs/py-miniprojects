@@ -1,5 +1,4 @@
-SLIDERS    = 
-[
+SLIDERS    = [
     [True,  False, True,   True   ]
     [True,  True,  False,  False  ]
     [False, True,  False,  False  ]
