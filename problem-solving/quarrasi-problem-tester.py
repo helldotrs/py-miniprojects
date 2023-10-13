@@ -1,16 +1,13 @@
-"""
-slider_0    = [True,  False, True,   True   ]
-slider_1    = [True,  True,  False,  False  ]
-slider_2    = [False, True,  False,  False  ]
-"""
-sliders     = [
+SLIDERS    = 
+[
     [True,  False, True,   True   ]
     [True,  True,  False,  False  ]
     [False, True,  False,  False  ]
 ]
-slider_col  = [slider_0, slider_1, slider_2 ]
 slider_pos  = ["right",  "right",  "right"  ] # val --> left/right
 
-
-
-cols = []
+def calculate_col_values(side):
+    for a in slider_pos if slider_pos == side:
+        pass
+    # check slide side. for now assume all are on the right side
+    
