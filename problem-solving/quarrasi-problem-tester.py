@@ -6,7 +6,7 @@ SLIDERS    = [
 slider_pos  = ["right",  "right",  "right"  ] # val --> left/right
 
 def calculate_col_values(side):
-    for a in slider_pos if slider_pos == side:
+    for a in slider_pos if a == side:
         print("y") # test
         
     # check slide side. for now assume all are on the right side
