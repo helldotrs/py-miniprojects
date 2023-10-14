@@ -9,7 +9,7 @@ slider_pos = ["right", "right", "right"]  # val --> left/right
 def calculate_col_totals(side):
     col_totals = [0] * len(SLIDERS[0])  # Initialize col_totals list with zeros
 
-    # Iterate through sliders and update col_totals based on their positions
+    # Iterate through sliders and update col_totals based on their positions # this comment seems like "# this is a comment"?
     for i in range(len(SLIDERS)):
         for j in range(len(SLIDERS[i])):
             if slider_pos[i] == side and SLIDERS[i][j]:
@@ -17,8 +17,17 @@ def calculate_col_totals(side):
 
     return col_totals
 
+def test_alarm(side): # could probably be split into two functions  
+    return sum(1 for a in side if a == 2) == 1 # my solution
+    
+    return side.count(2) == 1 # result of asking ml to improve it, wont be executed    
+
 cols_right   = calculate_col_totals("right")
 print(f"cols_right: {cols_right}") # test
+alarm_right  = test_alarm(cols_right)
+print(f"alarm_right: {alarm_right}")
 
 cols_left    = calculate_col_totals("left")
 print(f"cols_left: {cols_left}") # test
+alarm_left  = test_alarm(cols_left)
+print(f"alarm_left: {alarm_left}")
