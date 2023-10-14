@@ -39,4 +39,4 @@ alarm_left  = test_alarm(cols_left)
 print(f"alarm_left: {alarm_left}")
 
 alarms = test_alarms(cols_left, cols_right)
-print(f"alarms: {alarms}
+print(f"alarms: {alarms}")
