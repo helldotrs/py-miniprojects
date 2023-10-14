@@ -17,8 +17,8 @@ def calculate_col_totals(side):
 
     return col_totals
 
-cols_right   = calculate_col_totals(right)
+cols_right   = calculate_col_totals("right")
 print(f"cols_right: {cols_right}") # test
 
-cols_left    = calculate_col_totals(left)
+cols_left    = calculate_col_totals("left")
 print(f"cols_left: {cols_left}") # test
