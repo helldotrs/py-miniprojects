@@ -22,6 +22,9 @@ def test_alarm(side): # could probably be split into two functions
     
     return side.count(2) == 1 # result of asking ml to improve it, wont be executed    
 
+def test_alarms(left,right): # is this name unique enough of could it be something like test_both_alarms()? or should I just stack??
+    return test_alarm(left) or test_alarm(right) # FIXME: assuming non-exclusivity here. look up rules.
+
 cols_right   = calculate_col_totals("right")
 print(f"cols_right: {cols_right}") # test
 alarm_right  = test_alarm(cols_right)
