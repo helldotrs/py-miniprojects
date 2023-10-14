@@ -18,9 +18,9 @@ def calculate_col_totals(side):
     return col_totals
 
 def test_alarm(side): # could probably be split into two functions  
-    return sum(1 for a in side if a == 2) == 1 # my solution
+    #return sum(1 for a in side if a == 2) == 1 # my solution # TypeError: 'bool' object is not iterable
     
-    return side.count(2) == 1 # result of asking ml to improve it, wont be executed    
+    return side.count(2) == 1 # result of asking ml to improve it    
 
 def test_alarms(left,right): # is this name unique enough of could it be something like test_both_alarms()? or should I just stack??
     return test_alarm(left) or test_alarm(right) # FIXME: assuming non-exclusivity here. look up rules.
