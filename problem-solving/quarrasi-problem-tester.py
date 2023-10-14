@@ -17,7 +17,8 @@ def calculate_col_totals(side):
 
     return col_totals
 
-# Check slide side (for now assume all are on the right side)
-side = "right"
-col_totals = calculate_col_totals(side)
-print(f"Column totals for sliders on the {side} side: {col_totals}")
+cols_right   = calculate_col_totals(right)
+print(f"cols_right: {cols_right}") # test
+
+cols_left    = calculate_col_totals(left)
+print(f"cols_left: {cols_left}") # test
