@@ -42,4 +42,12 @@ print(f"alarm_left: {alarm_left}")
 alarms = test_alarms(cols_left, cols_right)
 print(f"alarms: {alarms}")
 
+
+slider_pos = ["right", "right", "right"]  # val --> left/right # same as original
+main()
+
+slider_pos = ["left", "right", "right"]  # val --> left/right # new test
+main()
+
+slider_pos = ["left", "left", "right"]  # val --> left/right # new test
 main()
