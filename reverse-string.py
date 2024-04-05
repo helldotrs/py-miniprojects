@@ -1,4 +1,4 @@
-reverse(str_in):
+def reverse(str_in):
     str_out = ""
     for char in str_in:
         str_out = char + str_out
